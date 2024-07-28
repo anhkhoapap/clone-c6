@@ -1,0 +1,31 @@
+ls      			(return list file in current working directory)
+cd     				(change directory)
+~      				(home directory)
+/       			(root directory)
+.       			(current directory)
+..      			(parent directory)
+pwd     			(show the path to current working directory)
+find				(find file in the directory tree)
+find . -name '[file name]'	(find file in current folder '.' :mean current folder, can change '.' to a path where you want to find)
+find . -iname '[file name]'	(find file in current folder but dont mind upper or lowercase)
+mkdir [folder name]		(create a new folder)
+rm [file or folder]		(remove file or folder)
+rm -m [folder name]		(remove folder along with child object)
+rmdir [folder name]		(only remove empty folder)
+touch [files]			(create a new file and update file date of exist file)
+date -r [file]			(show the 'file date':mean the last time you modifi it)
+cp [file] [folder/file]		(copy file to a folder or to a new file)
+cp -r [folder] [folder]		(copy folder)
+mv [files] [folder]		(move file)
+mv [folders] [folder]		(move folder)
+chmod [mode] [file] 		(change mode of file)
+*				(like % in sql)
+ls -l				(list some attribute of file)
+ls -a 				(list all file, include hidden files)
+ls -la				(use combine 2 option to see all)
+
+
+ 
+
+ 
+
