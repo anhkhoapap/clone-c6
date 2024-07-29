@@ -1,4 +1,5 @@
 ls      			(return list file in current working directory)
+ls -r				(list the tree directory of current working directory)
 cd     				(change directory)
 ~      				(home directory)
 /       			(root directory)
@@ -23,9 +24,37 @@ chmod [mode] [file] 		(change mode of file)
 ls -l				(list some attribute of file)
 ls -a 				(list all file, include hidden files)
 ls -la				(use combine 2 option to see all)
-
-
- 
+cat [file]			(print the file contents)
+more [file]			(print the file contents page by page use "space bar" to view a next page and press q to quit)
+less [file]			(print the file contents line by line use "Up Arrow" and "Down Arrow" to view and press q to quit)
+head [file]			(print first 10 line of file)
+head -n [N] [file] 		(print first N line of file)
+tail [file]			(print last 10 line of file)
+tail -n [N] [file]		(print last N line of file)
+wc [file]			(print number of words, lines, characters in file)
+wc -l | -w | -c [file]		(print number of lines or words or charactors in file)
+sort [file] 			(sort line in the file)
+sort -r [file]			(reverse sort line)
+uniq [file]			(unique the line of file if they are consecutive)
+grep [pattern] [file]		(return lines in file match with pattern)
+grep -i [pattern] [file]	(return lines match with pattern but don't mind upper or lowercase)
+cut -c [N-M] [file]		(return a file which contain N-M characters on line)
+cut -d [char] -f[N] [file] 	(return a field N of line was split by single char)
+paste [file file1 ...]		(merge lines from different files)
+paste -d [str] [files]		(merge lines from different files with a str between each field (defaut option is TAB)) 
+hostname			(print host name)
+hostname -i			(print IP adress)
+ifconfig			(see info of network)
+ping [IP]			(ping infinite time)
+ping -c [N] [IP]		(ping N time)
+curl [URL]			(transfer data to and from URL) as (Client URL)  
+tar -cf [name].tar [folder]	(archive files and folder)
+tar -czf [name].gz [folder]	(archive .gz file)
+tar -tf [name].tar		(check the content in file)
+tar -xf [name].tar [folder]	(extract files and folder)
+tar -xzf [name].gz [folder]	(extract .gz file)
+zip [name].zip [folder]		
+unzip [name].zip
 
  
 
