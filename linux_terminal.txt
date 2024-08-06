@@ -55,6 +55,13 @@ tar -xf [name].tar [folder]	(extract files and folder)
 tar -xzf [name].gz [folder]	(extract .gz file)
 zip [name].zip [folder]		
 unzip [name].zip
+[cmd 1] | ... | [cmd n]		(pipes: use the output of one command as the input of another)
+tr [OPTION] [target][replace] 	(replace target characters to replacement characters)
+\"				(matches with character " )
+\s*				(matches with any number of whitespace (\s) characters
+[0-9]				(matches with a digit from 0 to 9)
+[A-Z]				(matches with a character form A to Z)
+?\.				(matches with a . )
 
  
 
