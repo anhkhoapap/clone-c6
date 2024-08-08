@@ -62,6 +62,70 @@ tr [OPTION] [target][replace] 	(replace target characters to replacement charact
 [0-9]				(matches with a digit from 0 to 9)
 [A-Z]				(matches with a character form A to Z)
 ?\.				(matches with a . )
+" "				(understand special char in string)
+' '				(opposite of the above line)
+>				(redirect output to the file and overwrite if it exist)
+>>				(append output to the file)
+2>				(redirect standard error the file)
+2>>				(append standard error the file)
+<				(redirect file contents to standard input)
+$(command) or `command`		(replace the command with its output)
+Batch mode (;)			(take turn to run command)
+Concurrent mode (&)		(all command run the same time)
 
- 
+---------CONDITIONALS---------
+syntax:
+
+if [ condition ]
+then
+    statement_block_1
+else
+    statement_block_2
+fi
+
+example:
+
+if [[ $# == 2 ]]
+then 
+    echo "number of arguments is equal to 2"
+else
+    echo "number of arguments is not equal to 2"
+fi
+
+----------ARRAY---------
+
+create a array: my_array=(1 2 "three" "four" 5) 
+create a empty array: declare -a empty_array
+add one element: my_array+=("six")
+
+-------FOR-LOOPS--------
+
+examples:
+
+for item in ${my_array[@]}; do
+    echo $item
+done
+
+for i in ${!my_array[@]}; do
+    echo ${my_array[$i]}
+done
+
+N=6
+for (( i=0; i<=$N; i++ )); do
+    echo $i
+done
+
+sh file ex:
+
+#! /bin/bash 
+my_array=(1 2 3)
+count=0
+sum=0
+for i in ${!my_array[@]}; do
+    echo ${my_array[$i]}
+    count=$($(count)+1)
+    sum=$(($sum+${my_array[$i]}))
+done 
+echo $count
+echo $sum
 
