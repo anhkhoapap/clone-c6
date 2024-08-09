@@ -129,3 +129,13 @@ done
 echo $count
 echo $sum
 
+--------CRONTAB---------
+
+$ crontab -e
+
+job syntax: m h dom mon dow command 
+
+example job: 30 15 * * 0 date >> sundays.txt
+(add current date into file sundays.txt every sunday at 15:30)
+
+
