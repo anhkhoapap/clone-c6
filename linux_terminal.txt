@@ -73,6 +73,15 @@ $(command) or `command`		(replace the command with its output)
 Batch mode (;)			(take turn to run command)
 Concurrent mode (&)		(all command run the same time)
 
+-----------USE FILTER-----------
+
+[cmd] | tr -s " "		(tr: trim repeated characters to the single character)
+[cmd] | xargs			(xargs: remove the spaces front and behind a string)
+[cmd] | rev			(rev: reverse string) 
+
+tip get the last word in string:
+echo " one  two three " | tr -s " " | xargs | rev | cut -d " " -f1 | rev
+
 ---------CONDITIONALS---------
 syntax:
 
