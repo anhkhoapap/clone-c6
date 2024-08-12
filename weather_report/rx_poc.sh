@@ -1,11 +1,11 @@
 #!/bin/bash
 
 today=$(date +"%d-%m-%y")
-weather_report=/home/pha/project/clone_c6/weather_report/raw_data_$today.txt
+weather_report="/home/pha/project/clone_c6/weather_report/raw_data_$today.txt"
 
 curl "wttr.in" > $weather_report
 
-temp="home/pha/project/clone_c6/weather_report/temperatures.txt"
+temp="/home/pha/project/clone_c6/weather_report/temperatures.txt"
 
 grep °C $weather_report > $temp
 
